@@ -30,6 +30,15 @@ $(document).on("keydown",function(){
     }
 });
 
+// to start the game
+$(document).on("click",function(){
+    if(!started){
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+    }
+});
+
 // to respond to button click
 $(".btn").on("click",function(){
     // the color clicked by the user
